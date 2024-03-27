@@ -14,5 +14,5 @@ TEST_CASE("SortedAList") {
   ss << L;
   REQUIRE(ss.str() == "[1,2,3,4,5]");
 
-  // You might want to create your own test case for `remove(i)`
+  // Todo: Test `remove(i)`
 }

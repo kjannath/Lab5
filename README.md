@@ -29,22 +29,14 @@ Please implement the following member functions in the **AList.h**.
    
 ## Hints
 
-The **main.cpp** provided in this repository uses **doctests.h** framework to write testcases for the above five member functions. 
+The **main.cpp** provided in this repository uses **doctests.h** framework to write testcases for the **put** member function. 
+Follow the example to test the **remove** member function. 
 
-You can modify the file **main.cpp** to add more testcases. 
-
-If you type **main.out**, all testcases are tested. 
-
-To run a particular subcase, specify the testcase (AList), and the subcase name in the command line:
-```
-./main.out -tc="AList" -sc="addFirst and getFirst"
-```
 
 ## Submission 
 
 Submit your **SortedAList.h** file at the following link by April 9th, Tuesday, midnight (11:59pm).
 
- 
 
 The autograder compiles and tests your programs using 
 some testcases that are different from those in **main.cpp**. If your program fails some testcases, go back to review your code, and test your member functions

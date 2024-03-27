@@ -1,6 +1,6 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "SortedAList.h"
-#include <doctest.h>
+#include "doctest.h"
 
 TEST_CASE("SortedAList") {
   ds::SortedAList<int> L;

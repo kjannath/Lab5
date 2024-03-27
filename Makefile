@@ -8,6 +8,8 @@ LDFLAGS  += -fsanitize=address -fno-omit-frame-pointer
 %.out: %.cpp
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
+main.o: SortedAList.h SortedList.h
+
 test: main.out
 	./main.out
 

@@ -23,11 +23,9 @@ If you haven't done so already, please set up programming environment our our ow
 
 Please implement the following member functions in the **AList.h**. 
 
-1. Implement  **addFirst** member function 
-2. Implement **getFirst()** member function
-3. Implement **removeFirst()**  member function
-4. Implement the copy constructor, note that you need to perform deep-copy
-5. Implement the assignment operator. Note that you need to resize the array as needed, and perform deep-copy
+1. Implement **remove(i)** member function of **SortedAList**.
+2. Implement **put(ItemType item)** member function of **SortedAList**.
+3. Test your functions by adding more testcases scenarios to **main.cpp**.
    
 ## Hints
 
@@ -44,7 +42,7 @@ To run a particular subcase, specify the testcase (AList), and the subcase name 
 
 ## Submission 
 
-Submit your **AList.h** file at the following link by April 9th, Tuesday, midnight (11:59pm).
+Submit your **SortedAList.h** file at the following link by April 9th, Tuesday, midnight (11:59pm).
 
  
 

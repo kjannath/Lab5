@@ -8,8 +8,6 @@ LDFLAGS  += -fsanitize=address -fno-omit-frame-pointer
 %.out: %.cpp
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
-
-
 test: main.out
 	./main.out
 

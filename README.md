@@ -25,7 +25,8 @@ Please implement the following member functions in the **AList.h**.
 
 1. Implement **remove(i)** member function of **SortedAList**.
 2. Implement **put(ItemType item)** member function of **SortedAList**.
-3. Test your functions by adding more testcases scenarios to **main.cpp**.
+3. Understand how **binary_search** works (by using VSCode debugger), and use it to implement **find** member function.
+4. Test your functions by adding more testcases scenarios to **main.cpp**.
    
 ## Hints
 

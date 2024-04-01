@@ -14,6 +14,7 @@ public:
   virtual Item remove(int i) = 0;
   virtual Item smallest() const = 0;
   virtual Item greatest() const = 0;
+  virtual int find(const Item & it) const=0; 
 
   friend std::ostream &operator<<(std::ostream &os, const SortedList &l) {
     os << "[";

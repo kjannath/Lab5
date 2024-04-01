@@ -35,6 +35,31 @@ private:
     items = a;
   }
 
+  /** search for "it" in subarray items[left...right], return the 
+   * index of "it" in the array if found; otherwise, return -1 
+   */
+  int binary_search (const ItemType & it, int left, int right) {
+       //base cases 
+       if (left>right)
+          return -1;
+       if (left==right) {
+            if (items[left]==it)
+              return left;
+            else 
+              return -1;
+       }
+      //General case:
+      int mid = (left+right)/2;
+
+      if (items[mid]==it)
+         return mid;
+      else if (it>items[mid])
+         return binary_search (it, mid+1, right);
+      else
+         return binary_search (it, left, mid-1);
+    
+  }
+
 public:
   /**
    * Construct a new SortedAList object.
@@ -64,7 +89,7 @@ public:
 
   inline ItemType remove(int i) override;
   inline void put(const ItemType &it) override;
-};
+  inline int find(const ItemType & it) override;
 
 /**
  * Remove and return the i-th item from the sorted list.
@@ -81,6 +106,14 @@ void SortedAList<ItemType>::put(const ItemType &it) {
   // TODO:
 }
 
+/** 
+ * Find "it" in the sorted list using binary search, and return its position in the list; return -1
+    if "it" does not occur in the list
+ */
+inline int find(const ItemType & it)
+{
+  //TODO: 
+}
 } // namespace ds
 
 #endif // __SORTED_ALIST_H__

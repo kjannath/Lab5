@@ -114,7 +114,7 @@ void SortedAList<ItemType>::put(const ItemType &it) {
     if "it" does not occur in the list
  */
 template <typename ItemType>
-int void SortedAList<ItemType>::find (const ItemType & it)
+int SortedAList<ItemType>::find (const ItemType & it)
 {
   //TODO: 
 }

@@ -90,12 +90,14 @@ public:
   inline ItemType remove(int i) override;
   inline void put(const ItemType &it) override;
   inline int find(const ItemType & it) override;
-};
+}; //end of SortedAList declaration 
 
+//Implementation of three member functions 
 /**
  * Remove and return the i-th item from the sorted list.
  */
-template <typename ItemType> ItemType SortedAList<ItemType>::remove(int i) {
+template <typename ItemType> 
+ItemType SortedAList<ItemType>::remove(int i) {
   // TODO:
 }
 

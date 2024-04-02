@@ -89,7 +89,7 @@ public:
 
   inline ItemType remove(int i) override;
   inline void put(const ItemType &it) override;
-  inline int find(const ItemType & it) override;
+  inline int find(const ItemType & it) const override;
 }; //end of SortedAList declaration 
 
 //Implementation of three member functions 
@@ -114,7 +114,7 @@ void SortedAList<ItemType>::put(const ItemType &it) {
     if "it" does not occur in the list
  */
 template <typename ItemType>
-int SortedAList<ItemType>::find (const ItemType & it)
+int SortedAList<ItemType>::find (const ItemType & it) const
 {
   //TODO: 
 }

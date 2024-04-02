@@ -90,6 +90,7 @@ public:
   inline ItemType remove(int i) override;
   inline void put(const ItemType &it) override;
   inline int find(const ItemType & it) override;
+};
 
 /**
  * Remove and return the i-th item from the sorted list.
@@ -110,7 +111,8 @@ void SortedAList<ItemType>::put(const ItemType &it) {
  * Find "it" in the sorted list using binary search, and return its position in the list; return -1
     if "it" does not occur in the list
  */
-inline int find(const ItemType & it)
+template <typename ItemType>
+int void SortedAList<ItemType>::find (const ItemType & it)
 {
   //TODO: 
 }

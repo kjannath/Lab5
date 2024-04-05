@@ -9,6 +9,15 @@ From your terminal (mac or WSL/Ubunto) window, you can use the following command
 ```
 git clone https://github.com/CISC2200-Spring2024/lab5.git
 ```
+Alternatively, you can use the following command to download the starter code as a zip file:
+```
+wget https://github.com/CISC2200-Spring2024/lab5/archive/refs/heads/main.zip
+```
+
+and then unzip it (if it's not automatically unzipped): 
+```
+unzip main.zip
+```
 
 ## Programming Environment Setup
 If you haven't done so already, please set up programming environment our our own computer, by following [Setup Tutorial](https://eecs280staff.github.io/tutorials/). 

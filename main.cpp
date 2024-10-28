@@ -13,9 +13,11 @@ int main()
   L.put(0);
   L.put(1);
 
-  for (int i=0; i<5;i++) 
+  for (int i=0; i<5;i++)
     cout <<i<<"-th"<<L.get(i)<<endl;
 
   L.remove(3);
   cout <<"3-th"<<L.get(3)<<endl;
+
+  // TODO: Add more tests / test find function
 }

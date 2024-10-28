@@ -1,17 +1,21 @@
 CXX := g++
-CXXFLAGS := -O0 -g -Wall -std=c++14 -Werror=return-type
-
-# enable asan
-CXXFLAGS += -fsanitize=address -fno-omit-frame-pointer
-LDFLAGS  += -fsanitize=address -fno-omit-frame-pointer
+CXXFLAGS := -O0 -g -Wall -std=c++20 -Werror=return-type
 
 %.out: %.cpp
-	$(CXX) $(CXXFLAGS) $^ -o $@
+	@$(CXX) $(CXXFLAGS) $^ BigInt.cpp Calculator.cpp Transformer.cpp -o $@
 
-test: main.out
-	./main.out
+main: main.out
+	./$<
 
-main.o: SortedAList.h SortedList.h
+test: test.out
+	./$< -tc="$(TC)" -sc="$(SC)"
+
+check: Calculator.cpp BigInt.cpp Transformer.cpp
+	@dos2unix $^ > /dev/null 2>&1
+	@echo "Suggestions are for reference only ..."
+	@cppcheck --language=c++ --enable=style,warning --suppress=copyCtorAndEqOperator $^
 
 clean:
-	rm -f *.out
+	@rm -f *.out
+
+all: clean test.out check test

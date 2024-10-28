@@ -39,7 +39,7 @@ namespace ds {
       /** search for "it" in subarray items[left...right], return the
        * index of "it" in the array if found; otherwise, return -1
        */
-      int binary_search (const ItemType & it, int left, int right) {
+      int binary_search (const ItemType & it, int left, int right) const {
         //base cases
         if (left>right)
           return -1;

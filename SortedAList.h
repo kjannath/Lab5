@@ -100,6 +100,20 @@ namespace ds {
   template <typename ItemType>
   ItemType SortedAList<ItemType>::remove(int i) {
     // TODO:
+    if (i < 0 || i >= count) {
+        std::cout << "Error: Index " << i << " is out of range." << std::endl;
+        return;
+    }
+
+    ItemType itemToRemove = items[i];
+    
+    // Shift items to the left
+    for (int j = i; j < count - 1; j++) {
+        items[j] = items[j + 1];
+    }
+
+    count--; // Decrease count
+    return itemToRemove; // Return removed item
   }
 
   /**
@@ -108,6 +122,25 @@ namespace ds {
   template <typename ItemType>
   void SortedAList<ItemType>::put(const ItemType &it) {
     // TODO:
+     if (count >= maxCnt) {
+        resize(maxCnt * RFACTOR); // Resize
+    }
+
+    // Find the position to insert the item using binary search
+    int pos = 0; 
+    for (pos = 0; pos < count; pos++) {
+        if (items[pos] > it) {
+            break;
+        }
+    }
+
+    // Shift items to the right 
+    for (int j = count; j > pos; j--) {
+        items[j] = items[j - 1];
+    }
+
+    items[pos] = it; // Insert the item
+    count++; // Increase the count
   }
 
   /**
@@ -118,5 +151,6 @@ namespace ds {
   int SortedAList<ItemType>::find (const ItemType & it) const
   {
     // TODO:
+    return binary_search(it, 0, count - 1);
   }
 } // namespace ds
